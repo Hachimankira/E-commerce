@@ -1,7 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import INFO from '../../../components/User';
 
 const Product = () => {
+
+    useEffect(() => {
+		document.title = `Product | ${INFO.main.title}`; //(``) to create tempalte string in JS
+		window.scrollTo(0, 0); //scrolls window to top when their is some changes made in component 
+	}, []);
+
     const { id } = useParams();
     const [product, setProduct] = useState({})
     console.log(id, 'id', product)

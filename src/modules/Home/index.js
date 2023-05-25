@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import Hero from '../../components/Hero'
-import Products from '../../components/Products'
+import Products from '../../components/ProductCard'
 import Features from '../../components/Features'
 import StatCard from '../../components/StatCard'
 import Footer from '../../components/Footer'
+import ProductCard from '../../components/ProductCard'
 
 
 const Home = () => {
@@ -29,7 +30,7 @@ const Home = () => {
             </div>
             {
                 products.length>0?
-                <Products products={products} />
+                <ProductCard products={products} />
                 :
                 <div>Loading .....</div>
             }
