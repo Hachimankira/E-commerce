@@ -7,6 +7,8 @@ import Product from './modules/Home/Product';
 import { useEffect } from 'react';
 import INFO from './components/User';
 import Products from './modules/Home/Products';
+import CategoryProducts from './modules/Home/CategoryProducts';
+
 
 
 
@@ -22,6 +24,7 @@ function App() {
           <Route path="/"  element={<Home />} />
           <Route path="/products/:id"  element={<Product />} />
           <Route path="/products"  element={<Products />} />
+          <Route path="/categories/:name" element={<CategoryProducts />} />
           <Route path="*"  element={<div>404 Not found</div>} />
       </Routes>
     </div>
