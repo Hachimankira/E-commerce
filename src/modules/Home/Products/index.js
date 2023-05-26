@@ -10,7 +10,7 @@ const Products = () => {
       const fetchProducts = async() =>{
         const response = await fetch('https://fakestoreapi.com/products')
         const data= await response.json()
-        console.log(data)
+        console.log(data, 'data')
         setProducts(data)
       }
       fetchProducts()
@@ -24,8 +24,9 @@ const Products = () => {
                 <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900">ALL PRODUCTS</h1>
             </div>
             {
-                products.length>0?
-                <ProductCard products={products}/> :
+                products.length > 0?
+                <ProductCard products={products}/> 
+                :
                 <div>Loading...</div>
             }
             
